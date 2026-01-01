@@ -9,10 +9,11 @@ CREATE TABLE IF NOT EXISTS regions (
 CREATE TABLE IF NOT EXISTS branches (
     id SERIAL PRIMARY KEY,
     public_id UUID UNIQUE NOT NULL DEFAULT gen_random_uuid(),
-    region_id INT NOT NULL,
+    region_id INT NOT NULL REFERENCES regions(id),
     code INT NOT NULL,
     name VARCHAR(255),
-    phone VARCHAR(20)
+    phone VARCHAR(20),
+    CONSTRAINT fk_region FOREIGN KEY (region_id) REFERENCES regions(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS roles (
