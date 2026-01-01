@@ -4,7 +4,7 @@
 DRIVER="postgres"
 DB_HOST="localhost"
 DB_PORT="5432"
-DB_NAME="project_management_db"
+DB_NAME="phonebook_db"
 MIGRATIONS_DIR="./database/migrations"
 
 # ----- ASK FOR CREDENTIALS -----

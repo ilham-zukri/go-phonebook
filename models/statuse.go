@@ -2,8 +2,8 @@ package models
 
 import "github.com/google/uuid"
 
-type Region struct {
+type Status struct {
 	ID      int    `json:"id" gorm:"primary_key" db:"id"`
 	PublicID uuid.UUID `json:"public_id" db:"public_id"`
-	Region    string `json:"region" db:"region"`
+	Status  string `json:"status" db:"status"`
 }
